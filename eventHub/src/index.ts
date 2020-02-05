@@ -7,9 +7,9 @@ class EventHub {
         this.cache[eventName].push(fn);
     }
 
-    emit(eventName) {
+    emit(eventName,data) {
         // 把this.cache[eventName] 数组里的 fn 全部依次调用
-        (this.cache[eventName] || []).forEach(fn => fn());
+        (this.cache[eventName] || []).forEach(fn => fn(data));
     }
 }
 
