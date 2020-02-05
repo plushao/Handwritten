@@ -21,7 +21,11 @@ class EventHub {
 }
 
 export default EventHub
-
+/*
+*  帮助函数 indexOf
+*  @param array
+*  @param item
+* */
 function indexOf(array, item) {
     if (array === undefined) return -1;
     let index = -1;
